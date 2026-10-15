@@ -1,0 +1,22 @@
+SITE ATELIÊ DA JOJÔ — arquivos para publicar
+
+O site é estático: um index.html e a pasta images/. Não precisa de build nem de instalação.
+
+COMO PUBLICAR NA VERCEL
+Opção 1 (terminal):
+  1. Instale o Node.js e rode: npm i -g vercel
+  2. Entre nesta pasta e rode: vercel --prod
+  3. Se perguntar o framework, escolha "Other"; não há comando de build.
+Opção 2 (GitHub):
+  1. Suba o conteúdo desta pasta para um repositório.
+  2. Na Vercel, importe o repositório. Framework: "Other". Sem build command.
+
+COMO EDITAR (abra o index.html em um editor de texto)
+  - Procure por CONFIG: nome, WhatsApp, Instagram, retirada/entrega, horários, história (sobre) e depoimentos.
+  - PRODUTOS: nomes e descrições dos cards do catálogo.
+  - CARDAPIO: sabores e valores de bolos e docinhos.
+  - Fotos: coloque a foto nova em images/ com o mesmo nome da antiga.
+
+PENDENTE
+  - Trocar as fotos por originais em boa qualidade (as atuais são recortes do Instagram).
+  - Depois que houver domínio, adicionar og:image e link canônico no <head>.
