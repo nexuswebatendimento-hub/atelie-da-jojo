@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ateliê da Jojô | Confeitaria Artesanal em Ouro Branco – MG</title>
+<meta name="description" content="Bolos, doces e guloseimas artesanais em Ouro Branco – MG. Veja o catálogo do Ateliê da Jojô e faça sua encomenda pelo WhatsApp.">
+<meta property="og:title" content="Ateliê da Jojô — Confeitaria Artesanal">
+<link rel="icon" href="images/logo.png">
+<link rel="apple-touch-icon" href="images/logo.png">
+<link rel="preload" as="image" href="images/frutas.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FBF5EC;--sand:#EFE3D3;--blush:#F4D9D6;--rose:#A55B66;--caramel:#9A5C2E;--ink:#4A2C22;--ink2:#7A5646;--card:#FFFDF9;--wa:#2E7D4B;--sh:0 10px 30px rgba(74,44,34,.10);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#241612;--sand:#33211B;--blush:#4A2E2E;--rose:#D79AA2;--caramel:#D99A66;--ink:#F6EADB;--ink2:#CDB7A5;--card:#2E1D17;--sh:0 10px 30px rgba(0,0,0,.35);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#241612;--sand:#33211B;--blush:#4A2E2E;--rose:#D79AA2;--caramel:#D99A66;--ink:#F6EADB;--ink2:#CDB7A5;--card:#2E1D17;--sh:0 10px 30px rgba(0,0,0,.35);color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 90px)}
+body{font:400 17px/1.65 'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--bg)}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.12}
+h2{font-size:clamp(1.9rem,5vw,2.8rem);margin-bottom:12px}
+h3{font-size:1.2rem}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--caramel);outline-offset:3px}
+.w{width:min(1120px,100% - 40px);margin:auto}
+section{padding:72px 0}
+.lead{color:var(--ink2);max-width:60ch;margin-bottom:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 24px;border-radius:999px;font:700 1rem 'DM Sans',sans-serif;text-decoration:none;border:2px solid var(--ink);background:var(--ink);color:var(--bg);cursor:pointer;transition:.25s}
+.btn:hover{background:var(--caramel);border-color:var(--caramel);color:var(--bg);transform:translateY(-2px)}
+.btn.o{background:transparent;color:var(--ink)}
+.btn.s{min-height:44px;padding:0 16px;font-size:.92rem}
+.btn svg{width:20px;height:20px;fill:currentColor;flex:none}
+/* menu */
+header{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);left:0;right:0;z-index:50}
+.nav{display:flex;align-items:center;gap:10px;background:var(--card);border-radius:999px;padding:7px 8px 7px 10px;box-shadow:var(--sh)}
+.brand{display:flex;align-items:center;gap:10px;min-width:0;font:600 1.05rem Fraunces,serif;text-decoration:none;line-height:1.1}
+.brand img{width:44px;height:44px;flex:none;border-radius:50%}
+.brand small{display:block;font:400 .8rem 'DM Sans',sans-serif;color:var(--ink2)}
+.nav ul{display:none;list-style:none;padding:0;margin:0 auto;gap:24px}
+.nav ul a{display:block;padding:13px 4px;text-decoration:none;color:var(--ink2);font-weight:500;font-size:.95rem}
+.nav ul a:hover{color:var(--caramel)}
+.nav .btn{margin-left:auto}
+.menu{flex:none;width:44px;height:44px;border-radius:50%;border:0;background:var(--sand);color:var(--ink);font-size:1.3rem;cursor:pointer}
+.drawer{display:none;margin-top:8px;background:var(--card);border-radius:24px;padding:10px;box-shadow:var(--sh)}
+.drawer.on{display:block}
+.drawer a{display:block;padding:14px 16px;text-decoration:none;font-weight:500;border-radius:14px}
+.drawer a:hover{background:var(--sand)}
+@media(max-width:459px){.brand small,.nav .btn .t{display:none}.brand{font-size:.95rem}.nav .btn{width:44px;padding:0}}
+@media(min-width:1000px){.nav ul{display:flex}.menu,.drawer{display:none!important}.nav .btn{margin-left:0}}
+/* hero */
+.hero{padding:116px 0 64px;background:linear-gradient(180deg,var(--blush),var(--bg))}
+.hg{display:grid;gap:36px;align-items:center}
+@media(min-width:900px){.hg{grid-template-columns:1.05fr .95fr;gap:56px}}
+.eb{display:inline-block;padding:6px 14px;border-radius:999px;background:var(--card);color:var(--ink2);font-weight:700;font-size:.88rem;margin-bottom:18px}
+h1{font-size:clamp(2.3rem,7vw,3.9rem);margin-bottom:16px}
+h1 em{color:var(--caramel)}
+.hero p.sub{font-size:1.1rem;color:var(--ink2);max-width:46ch;margin-bottom:26px}
+.bts{display:flex;flex-wrap:wrap;gap:12px}
+.hand{font:500 1.6rem Caveat,cursive;color:var(--rose);margin-top:22px;display:flex;align-items:center;gap:8px}
+.hand svg{width:34px;height:20px}
+.ph{position:relative}
+.ph>img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:36px;box-shadow:var(--sh)}
+.badge{position:absolute;right:-6px;bottom:-20px;width:118px;height:118px;border-radius:50%;background:var(--card);box-shadow:var(--sh);display:grid;place-items:center;color:var(--ink)}
+.badge .rot{position:absolute;inset:0;width:100%;height:100%;animation:sp 26s linear infinite}
+.badge .bw{width:36px;height:22px;color:var(--rose)}
+@keyframes sp{to{transform:rotate(360deg)}}
+/* faixa */
+.strip{background:var(--sand);padding:22px 0}
+.strip .w{display:grid;grid-template-columns:1fr 1fr;gap:14px 20px;text-align:center;font-weight:500;font-size:.95rem}
+@media(min-width:760px){.strip .w{grid-template-columns:repeat(4,1fr)}}
+/* laço */
+.lc{display:flex;align-items:center;gap:14px;color:var(--rose);margin:0 0 22px}
+.lc i{height:2px;flex:1;background:currentColor;opacity:.35;border-radius:2px}
+.lc svg{width:40px;height:24px}
+/* catálogo */
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.chip{min-height:46px;padding:0 20px;border-radius:999px;border:1.5px solid var(--sand);background:var(--card);color:var(--ink);font:500 .95rem 'DM Sans',sans-serif;cursor:pointer;transition:.2s}
+.chip:hover{border-color:var(--rose)}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.card{background:var(--card);border-radius:24px;overflow:hidden;box-shadow:var(--sh);display:flex;flex-direction:column;animation:up .5s both}
+@keyframes up{from{opacity:0;transform:translateY(14px)}}
+.im{overflow:hidden}
+.card img{width:100%;aspect-ratio:1;object-fit:cover;transition:transform .6s}
+.card:hover img{transform:scale(1.04)}
+.b{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.b p{color:var(--ink2);font-size:.96rem}
+.pr{font-weight:700;color:var(--caramel);margin-top:auto}
+.note{margin-top:22px;font-size:.88rem;color:var(--ink2)}
+#cardapio{padding-top:8px}
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.cg{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.cc{background:var(--card);border-radius:24px;padding:22px;box-shadow:var(--sh);animation:up .5s both}
+.cc .pv{display:block;font:600 1.45rem Fraunces,Georgia,serif;color:var(--caramel);margin:2px 0 12px}
+.cc ul{list-style:none;padding:0;display:grid;gap:6px;color:var(--ink2);font-size:.97rem}
+.cc li::before{content:"· ";color:var(--rose);font-weight:700}
+.info{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-bottom:30px}
+.info>div{background:var(--card);border-radius:24px;padding:22px}
+.info p{color:var(--ink2);font-size:.96rem}
+@media(min-width:1000px) and (max-width:1099px){.nav ul{gap:14px}.nav ul a{font-size:.9rem}.brand small{display:none}}
+/* encomendas */
+#encomendas{background:var(--sand)}
+.steps{display:grid;gap:16px;counter-reset:s;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-bottom:30px}
+.st{background:var(--card);border-radius:24px;padding:22px;counter-increment:s}
+.st::before{content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--blush);color:var(--ink);font:600 1.2rem Fraunces,serif;margin-bottom:10px}
+.st p{color:var(--ink2);font-size:.96rem}
+.cta{text-align:center;margin-bottom:30px}
+.form{background:var(--card);border-radius:28px;padding:26px;max-width:680px;margin:auto;box-shadow:var(--sh);display:grid;gap:14px}
+.form label{font-weight:700;font-size:.92rem;display:grid;gap:6px}
+input,select,textarea{width:100%;min-height:50px;border:1.5px solid var(--sand);border-radius:14px;padding:12px 14px;font:400 1rem 'DM Sans',sans-serif;background:var(--bg);color:var(--ink)}
+textarea{min-height:100px;resize:vertical}
+@media(min-width:640px){.form .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}}
+.form .two{display:grid;gap:14px}
+/* galeria */
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:640px){.gal{grid-template-columns:repeat(3,1fr);gap:16px}}
+.gal button{padding:0;border:0;border-radius:22px;overflow:hidden;cursor:zoom-in;background:var(--sand)}
+.gal img{width:100%;aspect-ratio:1;object-fit:cover;transition:transform .5s,filter .5s}
+.gal button:hover img{transform:scale(1.06);filter:brightness(1.05) saturate(1.08)}
+.gal button:last-child{grid-column:span 2}
+.gal button:last-child img{aspect-ratio:2/1}
+.lb{position:fixed;inset:0;background:rgba(36,22,18,.92);display:none;place-items:center;z-index:80;padding:calc(env(safe-area-inset-top,0px) + 20px) 20px 20px}
+.lb.on{display:grid}
+.lb img{max-height:84vh;border-radius:18px}
+.lb button{position:absolute;top:calc(env(safe-area-inset-top,0px) + 12px);right:14px;width:48px;height:48px;border-radius:50%;border:0;background:var(--card);color:var(--ink);font-size:1.4rem;cursor:pointer}
+/* sobre */
+.sobre{display:grid;gap:30px;align-items:center}
+@media(min-width:800px){.sobre{grid-template-columns:.8fr 1.2fr;gap:56px}}
+.sobre img{width:min(280px,70%);height:auto;aspect-ratio:1;border-radius:50%;margin:auto;box-shadow:var(--sh)}
+.sobre p{color:var(--ink2);max-width:58ch;margin-bottom:14px}
+/* instagram, depoimentos, contato */
+#instagram{background:var(--blush);text-align:center}
+#instagram .lead{margin:0 auto 24px}
+.dep{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.dep blockquote{background:var(--card);border-radius:24px;padding:22px;box-shadow:var(--sh)}
+.dep cite{display:block;margin-top:10px;font-weight:700;font-style:normal;color:var(--caramel)}
+footer{background:var(--ink);color:var(--bg);padding:52px 0 96px}
+footer .w{display:grid;gap:28px}
+@media(min-width:760px){footer .w{grid-template-columns:1.2fr 1fr}}
+footer img{width:64px;height:64px;border-radius:50%;margin-bottom:12px}
+footer h3{margin-bottom:10px}
+footer ul{list-style:none;padding:0;display:grid;gap:8px}
+footer a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:4px}
+footer small{opacity:.75}
+.fab{position:fixed;right:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);z-index:45;min-height:56px;padding:0 22px;border-radius:999px;background:var(--wa);color:#fff;display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:.25s}
+.fab:hover{transform:translateY(-3px)}
+.fab svg{width:26px;height:26px;fill:#fff}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.badge .rot,.card,.cc{animation:none}.card img,.gal img,.btn{transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="wa" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.9 9.9 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.88 9.88 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.41z"/></symbol>
+<symbol id="bow" viewBox="0 0 40 24"><path d="M20 12C14 2 3 1 3 8s11 8 17 4zm0 0c6-10 17-11 17-4s-11 8-17 4zM17 14l-5 9m11-9l5 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="12" r="2.5" fill="currentColor"/></symbol>
+</svg>
+
+<header><div class="w">
+ <nav class="nav" aria-label="Principal">
+  <a class="brand" href="#topo"><img data-f="logo" alt="Logotipo do Ateliê da Jojô" width="44" height="44"><span><span data-c="nome">Ateliê da Jojô</span><small>Confeitaria Artesanal</small></span></a>
+  <ul><li><a href="#produtos">Produtos</a></li><li><a href="#cardapio">Cardápio</a></li><li><a href="#encomendas">Como encomendar</a></li><li><a href="#galeria">Galeria</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#instagram">Instagram</a></li></ul>
+  <a class="btn s" data-wa="" href="#" aria-label="Encomendar pelo WhatsApp"><svg><use href="#wa"/></svg><span class="t">Encomendar</span></a>
+  <button class="menu" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+ </nav>
+ <div class="drawer" id="drawer"><a href="#produtos">Produtos</a><a href="#cardapio">Cardápio</a><a href="#encomendas">Como encomendar</a><a href="#galeria">Galeria</a><a href="#sobre">Sobre</a><a href="#instagram">Instagram</a></div>
+</div></header>
+
+<main id="topo">
+<section class="hero"><div class="w hg">
+ <div>
+  <span class="eb">Confeitaria artesanal em <span data-c="cidade">Ouro Branco – MG</span></span>
+  <h1>Feito com carinho, pensado para adoçar seus <em>melhores momentos.</em></h1>
+  <p class="sub">Bolos e doces artesanais preparados com cuidado para tornar cada comemoração ainda mais especial.</p>
+  <div class="bts"><a class="btn o" href="#produtos">Ver nossos produtos</a><a class="btn" data-wa="Olá! Vi seu site e gostaria de fazer uma encomenda." href="#"><svg><use href="#wa"/></svg>Fazer uma encomenda</a></div>
+  <p class="hand"><svg><use href="#bow"/></svg>Cada detalhe preparado com amor</p>
+ </div>
+ <div class="ph"><img data-f="frutas" alt="Bolo de chocolate com frutas frescas e laço vermelho, feito pelo Ateliê da Jojô" width="480" height="600">
+  <div class="badge" aria-hidden="true"><svg class="rot" viewBox="0 0 120 120"><defs><path id="cp" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs><text font-size="11" font-weight="700" fill="currentColor"><textPath href="#cp" textLength="268">FEITO À MÃO · OURO BRANCO · MG · </textPath></text></svg><svg class="bw"><use href="#bow"/></svg></div>
+ </div>
+</div></section>
+
+<div class="strip"><div class="w"><span>Confeitaria artesanal</span><span data-c="cidade">Ouro Branco – MG</span><span>Bolos, doces e guloseimas</span><span>Encomendas pelo WhatsApp</span></div></div>
+
+<section id="produtos"><div class="w">
+ <div class="lc"><i></i><svg><use href="#bow"/></svg><i></i></div>
+ <h2>Bolos e doces artesanais em Ouro Branco – MG</h2>
+ <p class="lead">Escolha uma categoria, encontre o que combina com a sua festa e consulte direto pelo WhatsApp.</p>
+ <div class="chips" id="chips" role="group" aria-label="Filtrar por categoria"></div>
+ <div class="grid" id="grid"></div>
+ <p class="note" id="note" hidden>Fotos reais do ateliê. Os nomes e as descrições dos cards são ilustrativos; sabores e valores estão no cardápio.</p>
+ <p style="margin-top:18px"><a class="btn" href="#cardapio">Ver cardápio completo e valores</a></p>
+</div></section>
+
+<section id="cardapio"><div class="w">
+ <h2>Cardápio e valores</h2>
+ <p class="lead" id="cdlead"></p>
+ <div class="tabs" role="group" aria-label="Escolher cardápio"><button type="button" class="chip" data-t="bolos">Bolos</button><button type="button" class="chip" data-t="docinhos">Docinhos</button><button type="button" class="chip" id="sl" aria-pressed="false">Sem lactose</button></div>
+ <div class="cg" id="cg"></div>
+ <p class="note" id="cn"></p>
+</div></section>
+
+<section id="encomendas"><div class="w">
+ <h2>Como fazer sua encomenda</h2>
+ <p class="lead">Sem cadastro e sem pagamento no site: você conversa direto com a confeiteira.</p>
+ <div class="steps">
+  <div class="st"><h3>Escolha o sabor</h3><p>Veja o cardápio: massa e até dois recheios para o bolo, ou os sabores dos docinhos.</p></div>
+  <div class="st"><h3>Chame no WhatsApp</h3><p>Toque em qualquer botão do site para abrir a conversa.</p></div>
+  <div class="st"><h3>Conte os detalhes</h3><p>Informe a data, a quantidade de pessoas (cada 1 kg serve 10) e a personalização.</p></div>
+  <div class="st"><h3>Confirme o pedido</h3><p>Para confirmar, 50% do valor total antecipado; o restante é pago na retirada.</p></div>
+ </div>
+ <h3 style="margin-bottom:14px">Informações importantes</h3>
+ <div class="info">
+  <div><h3>Prazo</h3><p>Bolos tradicionais: no mínimo 2 dias de antecedência. Bolos com decoração de flores: no mínimo 7 dias. Docinhos: no mínimo 3 dias.</p></div>
+  <div><h3>Pagamento</h3><p>50% do valor total antecipado para confirmar o pedido e o restante na retirada. Aceitamos dinheiro, Pix e cartão de crédito e débito à vista (com link para pagamento).</p></div>
+  <div><h3>Adicionais</h3><p>O topo não está incluso no valor do bolo: você pode trazer o seu ou colocar depois da retirada, e também indicamos parceiras. Flores têm valores variados, somados ao valor do bolo.</p></div>
+  <div><h3>Docinhos</h3><p>Docinhos de 15 g, tamanho recomendado para festas, com pedido mínimo de 50 unidades por sabor. Forminhas coloridas em formato pétala; você pode trazer as suas, sem alterar o valor do cento.</p></div>
+ </div>
+ <p class="cta"><a class="btn" data-wa="" href="#"><svg><use href="#wa"/></svg>Quero fazer minha encomenda</a></p>
+ <form class="form" id="form">
+  <h3>Ou preencha e envie pelo WhatsApp</h3>
+  <label>Seu nome<input name="nome" autocomplete="name" required></label>
+  <label>Produto desejado<select name="produto" id="selprod"></select></label>
+  <div class="two"><label>Data da encomenda<input type="date" name="data"></label><label>Quantidade ou tamanho<input name="qtd" placeholder="Ex.: 20 pessoas"></label></div>
+  <label>Descrição e personalização<textarea name="desc" placeholder="Massa e até 2 recheios, sabores dos docinhos, tema, cores, recado no bolo..."></textarea></label>
+  <button class="btn" type="submit"><svg><use href="#wa"/></svg>Enviar pelo WhatsApp</button>
+ </form>
+</div></section>
+
+<section id="galeria"><div class="w">
+ <h2>Nossos trabalhos</h2>
+ <p class="lead">Toque em uma foto para ampliar.</p>
+ <div class="gal" id="gal"></div>
+</div></section>
+
+<section id="sobre" style="background:var(--sand)"><div class="w sobre">
+ <img data-f="logo" alt="Logotipo do Ateliê da Jojô, confeitaria artesanal" width="280" height="280">
+ <div>
+  <h2>Quem faz cada doce</h2>
+  <p id="sobretxt"></p>
+  <p>Encomendas, dúvidas e orçamentos são atendidos direto pelo WhatsApp.</p>
+  <a class="btn" data-wa="" href="#"><svg><use href="#wa"/></svg>Falar com a confeiteira</a>
+ </div>
+</div></section>
+
+<section id="instagram"><div class="w">
+ <h2>Acompanhe nossas delícias no Instagram</h2>
+ <p class="lead">@<span data-c="instagram"></span> — veja novos trabalhos e os cardápios de cada época.</p>
+ <a class="btn" data-ig="" href="#" target="_blank" rel="noopener">Ver Instagram</a>
+</div></section>
+
+<section id="depoimentos" hidden><div class="w"><h2>Quem já adoçou o dia</h2><div class="dep" id="dep"></div></div></section>
+</main>
+
+<footer id="contato"><div class="w">
+ <div><img data-f="logo" alt="" width="64" height="64"><h3><span data-c="nome">Ateliê da Jojô</span> — Confeitaria Artesanal</h3><p>Bolos, doces e guloseimas feitos com carinho em <span data-c="cidade">Ouro Branco – MG</span>.</p></div>
+ <div><h3>Contato</h3><ul id="contatos"><li><a data-wa="" href="#" target="_blank" rel="noopener">WhatsApp</a></li><li><a data-ig="" href="#" target="_blank" rel="noopener">Instagram</a></li></ul><p><small>© <span id="ano"></span> Ateliê da Jojô. Todos os direitos reservados.</small></p></div>
+</div></footer>
+
+<a class="fab" data-wa="" href="#" aria-label="Encomendar pelo WhatsApp"><svg><use href="#wa"/></svg>Encomendar</a>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada"><button type="button" aria-label="Fechar">✕</button><img alt=""></div>
+
+<script>
+/* ===== CONFIGURAÇÃO — edite aqui ===== */
+const CONFIG={
+ nome:"Ateliê da Jojô",
+ confeiteira:"Nádia Souza",
+ cidade:"Ouro Branco – MG",
+ whatsapp:"5531991881468", // DDI+DDD+número, só dígitos. CONFIRMAR o número.
+ instagram:"ateliedajojoconfeitaria",
+ mensagem:"Olá! Vi seu site e gostaria de saber mais sobre suas encomendas.",
+ entrega:"Retirada com a confeiteira",   // ex.: "Retirada no ateliê e entrega sob consulta" (aparece só se preenchido)
+ horarios:"",  // ex.: "Seg a sáb, 9h às 18h" (aparece só se preenchido)
+ sobre:"",     // história da confeiteira; se vazio, usa o texto padrão
+ demo:true,    // true mostra o aviso de nomes/descrições de exemplo no catálogo
+ depoimentos:[] // ex.: [{nome:"Maria S.",texto:"..."}] — a seção só aparece se houver itens
+};
+const CATS={todos:"Todos",festa:"Bolos para festa",comemorativo:"Bolos comemorativos",docinhos:"Docinhos e brigadeiros",brownies:"Brownies e embalados",datas:"Datas especiais"};
+// n=nome, d=descrição, c=categoria, f=foto (chave de FOTOS), p=preço (vazio = "Consulte o valor")
+const PRODUTOS=[
+ {n:"Bolo com frutas e chocolate",d:"Cobertura de chocolate decorada com frutas frescas.",c:"festa",f:"frutas",p:""},
+ {n:"Bolo com rosetas de chantilly",d:"Cobertura clara com rosetas e pérolas.",c:"festa",f:"rosetas",p:""},
+ {n:"Bolo degradê colorido",d:"Camadas em tons suaves, no estilo da sua festa.",c:"festa",f:"degrade",p:""},
+ {n:"Bolo com laço de fita",d:"Acabamento clássico com laço.",c:"comemorativo",f:"laco",p:""},
+ {n:"Bolo com topo personalizado",d:"Para marcar aniversários e datas importantes.",c:"comemorativo",f:"bolo70",p:""},
+ {n:"Brigadeiros em bandeja",d:"Docinhos para mesas de festa.",c:"docinhos",f:"brig",p:""},
+ {n:"Docinhos em caixinhas",d:"Doces individuais, prontos para servir.",c:"docinhos",f:"caixa",p:""},
+ {n:"Brownies embalados",d:"Embalagem com laço para presentear.",c:"brownies",f:"brownie",p:""},
+ {n:"Ovos decorados",d:"Para a Páscoa e outras datas especiais.",c:"datas",f:"ovos",p:""}
+];
+const GALERIA=[["frutas","Bolo de chocolate com frutas frescas"],["rosetas","Bolo com rosetas de chantilly"],["brig","Brigadeiros em bandeja dourada"],["degrade","Bolo degradê colorido"],["laco","Bolo branco com laço preto"],["caixa","Docinhos em caixinhas"],["bolo70","Bolo com topo personalizado e rosa"],["rosario","Bolo com detalhes em pérolas"],["azul","Bolo em degradê azul e rosa"],["brownie","Brownies embalados"],["ovos","Ovos decorados para a Páscoa"]];
+/* ===== Fotos — para trocar, coloque a foto nova na pasta images/ com o mesmo nome (ou mude o caminho aqui) ===== */
+const FOTOS={
+ "brownie": "images/brownie.jpg",
+ "brig": "images/brig.jpg",
+ "laco": "images/laco.jpg",
+ "frutas": "images/frutas.jpg",
+ "rosetas": "images/rosetas.jpg",
+ "rosario": "images/rosario.jpg",
+ "degrade": "images/degrade.jpg",
+ "caixa": "images/caixa.jpg",
+ "bolo70": "images/bolo70.jpg",
+ "azul": "images/azul.jpg",
+ "ovos": "images/ovos.jpg",
+ "logo": "images/logo.png"
+};
+/* ===== Código ===== */
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+const wa=t=>`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(t)}`;
+$$("[data-f]").forEach(i=>i.src=FOTOS[i.dataset.f]);
+$$("[data-c]").forEach(e=>e.textContent=CONFIG[e.dataset.c]);
+$$("[data-wa]").forEach(a=>{a.href=wa(a.dataset.wa||CONFIG.mensagem);a.target="_blank";a.rel="noopener"});
+$$("[data-ig]").forEach(a=>a.href=`https://www.instagram.com/${CONFIG.instagram}/`);
+$("#ano").textContent=new Date().getFullYear();
+$("#note").hidden=!CONFIG.demo;
+$("#sobretxt").textContent=CONFIG.sobre||`${CONFIG.confeiteira} é a confeiteira por trás do ${CONFIG.nome}, em ${CONFIG.cidade}. Em breve, aqui, a história dela e o cuidado que ela dedica a cada receita.`;
+[["entrega",""],["horarios","Horário: "]].forEach(([k,p])=>{if(CONFIG[k])$("#contatos").insertAdjacentHTML("beforeend",`<li>${p}${CONFIG[k]}</li>`)});
+$("#contatos").insertAdjacentHTML("beforeend",`<li>${CONFIG.cidade}</li>`);
+if(CONFIG.depoimentos.length){$("#depoimentos").hidden=false;$("#dep").innerHTML=CONFIG.depoimentos.map(d=>`<blockquote>“${d.texto}”<cite>${d.nome}</cite></blockquote>`).join("")}
+// catálogo
+const PRECO={festa:"A partir de R$ 100,00 o kg",comemorativo:"A partir de R$ 100,00 o kg",docinhos:"A partir de R$ 120,00 o cento"};
+const card=p=>`<article class="card"><div class="im"><img src="${FOTOS[p.f]}" alt="${p.n} — ${CONFIG.nome}" loading="lazy" width="480" height="480"></div><div class="b"><h3>${p.n}</h3><p>${p.d}</p><span class="pr">${p.p||PRECO[p.c]||"Consulte o valor"}</span><a class="btn o" href="${wa(`Olá! Vi seu site e gostaria de consultar sobre: ${p.n}.`)}" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Consultar pelo WhatsApp</a></div></article>`;
+function mostrar(c){$("#grid").innerHTML=PRODUTOS.filter(p=>c=="todos"||p.c==c).map(card).join("");$$("#chips .chip").forEach(b=>b.setAttribute("aria-pressed",b.dataset.c==c))}
+$("#chips").innerHTML=Object.entries(CATS).map(([k,v])=>`<button type="button" class="chip" data-c="${k}">${v}</button>`).join("");
+$$("#chips .chip").forEach(b=>b.onclick=()=>mostrar(b.dataset.c));
+mostrar("todos");
+// formulário → WhatsApp
+$("#selprod").innerHTML=`<option value="">Ainda não sei / outro</option><option>Bolo (escolher massa e recheios)</option><option>Docinhos (cento)</option>`+PRODUTOS.map(p=>`<option>${p.n}</option>`).join("");
+$("#form").onsubmit=e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.target));
+ const d=f.data?f.data.split("-").reverse().join("/"):"";
+ const L=["Olá! Vi seu site e gostaria de fazer uma encomenda.",f.nome&&`Nome: ${f.nome}`,f.produto&&`Produto: ${f.produto}`,d&&`Data: ${d}`,f.qtd&&`Quantidade/tamanho: ${f.qtd}`,f.desc&&`Detalhes: ${f.desc}`].filter(Boolean);
+ const a=document.createElement("a");a.href=wa(L.join("\n"));a.target="_blank";a.rel="noopener";document.body.appendChild(a);a.click();a.remove()};
+// galeria + ampliação
+$("#gal").innerHTML=GALERIA.map(([k,t])=>`<button type="button" data-k="${k}" aria-label="Ampliar foto: ${t}"><img src="${FOTOS[k]}" alt="${t} — ${CONFIG.nome}" loading="lazy" width="400" height="400"></button>`).join("");
+const lb=$("#lb"),li=lb.querySelector("img");
+let op;const abrir=b=>{op=b;li.src=FOTOS[b.dataset.k];li.alt=b.querySelector("img").alt;lb.classList.add("on");lb.querySelector("button").focus()},fechar=()=>{lb.classList.remove("on");op&&op.focus()};
+$$("#gal button").forEach(b=>b.onclick=()=>abrir(b));
+lb.onclick=fechar;
+addEventListener("keydown",e=>{if(!lb.classList.contains("on"))return;if(e.key=="Escape")fechar();if(e.key=="Tab"){e.preventDefault();lb.querySelector("button").focus()}});
+// cardápio (dados do PDF da confeiteira — edite aqui)
+const DOC={t:["Brigadeiro preto","Brigadeiro branco","Beijinho","Cajuzinho","Bicho de pé"],e:["Brigadeiro de paçoca","Brigadeiro de maracujá","Dois amores","Moranguinho","Café","Prestígio","Ninho"],p:["Churros","Olho de sogra","Ninho c/ nutella","Oreo","Sensação","Brigadeiro de Ferrero"]};
+const CARDAPIO={
+ bolos:{lead:"Escolha 1 massa e até 2 recheios. Cada 1 kg serve 10 pessoas.",un:"o kg",nota:"Frutas frescas nos recheios são cobradas à parte. O topo não está incluso no valor do bolo.",
+  normal:{g:[["Tradicionais","R$ 100,00",["Brigadeiro ao leite","Brigadeiro de morango","Beijinho","Ninho","Ninho c/ morango","Ninho c/ abacaxi","Mousse de maracujá","Mousse de limão","Abacaxi com coco"]],["Especiais","R$ 120,00",["Ganache","Doce de leite","Doce de leite c/ coco","Prestígio","Brigadeiro meio amargo","Mousse de chocolate","Olho de sogra"]],["Tops","R$ 140,00",["Mousse de Nutella","Caramelo salgado","Creme com nozes"]]],m:["Branco","Cacau","Red velvet","Coco","Cenoura"]},
+  lactose:{g:[["Tradicionais","R$ 120,00",["Brigadeiro ao leite","Brigadeiro de morango","Beijinho","Mousse de maracujá","Mousse de limão","Abacaxi com coco"]],["Especiais","R$ 140,00",["Ganache","Doce de leite","Doce de leite c/ coco","Prestígio","Brigadeiro meio amargo","Mousse de chocolate","Olho de sogra","Ninho","Ninho c/ morango","Ninho c/ abacaxi"]]],m:["Coco","Cenoura","Cacau"]}},
+ docinhos:{lead:"Docinhos de 15 g, tamanho recomendado para festas. Pedido mínimo de 50 unidades por sabor.",un:"o cento",nota:"",
+  normal:{g:[["Tradicionais","R$ 120,00",DOC.t],["Especiais","R$ 130,00",DOC.e],["Tops","R$ 150,00",DOC.p]]},
+  lactose:{g:[["Tradicionais","R$ 140,00",DOC.t],["Especiais","R$ 150,00",DOC.e],["Tops","R$ 160,00",DOC.p]]}}
+};
+let tp="bolos",sl=false;
+function cardapio(){const d=CARDAPIO[tp],v=d[sl?"lactose":"normal"];
+ $("#cdlead").textContent=d.lead;
+ $("#cg").innerHTML=v.g.map(([n,p,l])=>`<div class="cc"><h3>${n}</h3><span class="pv">${p} ${d.un}</span><ul>${l.map(x=>`<li>${x}</li>`).join("")}</ul></div>`).join("")+(v.m?`<div class="cc"><h3>Opções de massa</h3><ul>${v.m.map(x=>`<li>${x}</li>`).join("")}</ul></div>`:"");
+ $("#cn").textContent=d.nota;$("#cn").hidden=!d.nota;
+ $$("[data-t]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.t==tp));$("#sl").setAttribute("aria-pressed",sl)}
+$$("[data-t]").forEach(b=>b.onclick=()=>{tp=b.dataset.t;cardapio()});
+$("#sl").onclick=()=>{sl=!sl;cardapio()};
+cardapio();
+// menu
+const mb=$(".menu"),dr=$("#drawer");
+mb.onclick=()=>{const o=dr.classList.toggle("on");mb.setAttribute("aria-expanded",o)};
+$$("#drawer a").forEach(a=>a.onclick=()=>{dr.classList.remove("on");mb.setAttribute("aria-expanded",false)});
+// entrada suave ao rolar
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+$$("h2,.lead,.st,.form,.sobre>*,.gal button,.lc").forEach(e=>{e.classList.add("rv");io.observe(e)});
+</script>
+</body>
+</html>
